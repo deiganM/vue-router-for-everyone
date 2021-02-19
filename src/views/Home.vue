@@ -6,11 +6,15 @@
     <div class="destinations">
       <!-- This is where the images and names are coming from -->
       <div v-for="destination in destinations" :key="destination.name">
-        <router-link :to="destination.slug">
+        <router-link
+          :to="{ name: 'DestinationDetails', params: { id: destination.id } }"
+        >
           <h2>{{ destination.name }}</h2>
         </router-link>
         <figure>
-          <router-link :to="destination.name">
+          <router-link
+            :to="{ name: 'DestinationDetails', params: { id: destination.id } }"
+          >
             <img
               :src="require(`@/assets/${destination.image}`)"
               :alt="destinations.name"
