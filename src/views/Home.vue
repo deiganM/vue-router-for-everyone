@@ -52,6 +52,16 @@ export default {
   justify-content: space-between;
 }
 
+a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  text-decoration: underline;
+}
+
 img {
   height: 10rem;
 }
